@@ -1,0 +1,79 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Time New Roman', cursive;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: black;
+            overflow: hidden;
+        }
+        
+        .container {
+            position: absolute;
+            width: 100%;
+            left:40%;
+            transform: rotateZ(10deg);
+        }
+        
+        .a {
+            position: absolute;
+            display: flex;
+            color: black;
+            letter-spacing: 0.2rem;
+        }
+        
+        .container .box {
+            position: relative;
+            display: flex;
+            justify-items: center;
+            align-items: center;
+            width: calc(100% + 400px);
+            -webkit-box-reflect: below 2px linear-gradient(transparent, black);
+            animation: surface 1.5s ease-in-out infinite;
+        }
+        
+        @keyframes surface {
+            0% {
+                transform: translateX(0px);
+            }
+           50%, 100% {
+                transform: translateX(-200px);
+            }
+        }
+        
+        .container .box .cube {
+            position: flex;
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(to right, rgb(224, 120, 216), white);
+            box-shadow: 0 0 5px rgb(202, 119, 235), 
+            0 0 25px rgb(218, 177, 236), 
+            0 0 50px rgb(205, 136, 219), 
+            0 0 100px rgb(202, 130, 224), 
+            0 0 200px rgb(193, 135, 226);
+            transform-origin: bottom right;
+            animation: move 1.5s ease-in-out infinite;
+        }
+        
+        @keyframes move{
+            0% {
+                transform: rotate(0deg);
+            }
+            60% {
+                transform: rotate(90deg);
+            }
+            
+            70%
+             {
+                transform: rotate(90deg);
+            }
+            100% {
+                transform: rotate(90deg);
+            }
+        }
